@@ -1,6 +1,6 @@
-### $ yarn add  ty#pescript ts-node
-### $ yarn init -y###
-### $ yarn tsc --in##it
+#### $ yarn add  typescript ts-node
+#### $ yarn init -y
+#### $ yarn tsc --init
 
-### in pakage.json :
-###   - "start" : ts-node index.tx
+#### in pakage.json :
+####   - "start" : ts-node index.tx
