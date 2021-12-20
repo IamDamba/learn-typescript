@@ -1,29 +1,29 @@
-const obj = {
-  firstName: "Aris",
-  lastName: "Dev",
-  number: "06000000",
-  age: 23,
-  gender: false
-};
+const arrayOfString: (string | boolean)[] = ['1', '2', '3'];
+arrayOfString.push('');
+arrayOfString.push(1); //Incorrect, not the same type
+arrayOfString.push(true); //Correct
 
-const obj2 : {
-  firstName: string;
-  lastName: string;
-  phone: string;
+const arrayOfBoolean: boolean[] = [true, false, true];
+arrayOfBoolean.push(true);
+
+const arrayOfNumbers: number[] = [1, 1, 1];
+
+const array: string[] = [];
+array.push(true);
+array.push(1);
+array.push("1");
+
+let arrayOfObject: {
+  name: string;
   age: number;
   gender: boolean;
-} = {
-  firstName: "",
-  lastName: "",
-  phone: "",
-  age: 23,
+}[] = [];
+
+arrayOfObject.push({
+  name: '',
+  age: 1,
   gender: true
-}
+});
 
-obj2.age = 34;
-obj2.age = true; //Incorrect
-
-obj2.name; //Incorrect, cause dion't recognize it within the object declaration
-
-obj2.phone.length
-obj2.age.length //Incorrect
+const arrayOfArray = [["", "", ""], ["", ""]];
+const arrayOfArrayofArrayOfString: string[][][] = [[[""]], [["s"]]];
