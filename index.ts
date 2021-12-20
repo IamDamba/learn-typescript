@@ -1,4 +1,4 @@
-// // NUMBER YPE
+// // NUMBER TYPE
 
 // let age = 23;
 // let weight: number = 177
