@@ -1,29 +1,23 @@
-const arrayOfString: (string | boolean)[] = ['1', '2', '3'];
-arrayOfString.push('');
-arrayOfString.push(1); //Incorrect, not the same type
-arrayOfString.push(true); //Correct
+const add = (num1, num2) => {
+  return num1 + num2
+};
 
-const arrayOfBoolean: boolean[] = [true, false, true];
-arrayOfBoolean.push(true);
+const subtract = (num1: number, num2: number) => {
+  return num1 - num2
+};
 
-const arrayOfNumbers: number[] = [1, 1, 1];
+const compare = (num1: number, num2: number): boolean => {
+  //logic
+  //logic
+  //logic
+  //logic
+  //logic
+  //logic
+  //logic
+  //logic
+  return num1 > num2
+}
 
-const array: string[] = [];
-array.push(true);
-array.push(1);
-array.push("1");
-
-let arrayOfObject: {
-  name: string;
-  age: number;
-  gender: boolean;
-}[] = [];
-
-arrayOfObject.push({
-  name: '',
-  age: 1,
-  gender: true
-});
-
-const arrayOfArray = [["", "", ""], ["", ""]];
-const arrayOfArrayofArrayOfString: string[][][] = [[[""]], [["s"]]];
+const log = () => {
+  console.log('Hello')
+}
