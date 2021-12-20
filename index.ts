@@ -1,62 +1,60 @@
-const obj: {
-  firstName: string,
-  lastName: string,
-  age: number,
-  gender: boolean
-} = {
-  firstName: "",
-  lastName: '',
-  age: 24,
-  gender: false
-}
+// class Car {
+//   model: string
+//   color: string
+//   age: number
+//   private peopleInPolicy: string[] = []
+//   private readonly manufacturedDateTime: string = "2020-12-05"
+//   constructor(model, color, age) {
+//     this.model = model;
+//     this.color = color;
+//     this.age = age;
+//   }
 
-const obj2: {
-  firstName: string,
-  lastName: string,
-  age: number,
-  gender: boolean
-} = {
-  firstName: "",
-  lastName: '',
-  age: 24,
-  gender: false
-}
+//   describe() {
+//     console.log(
+//       `This car is a ${this.color} ${this.model}, and this is ${this.age} year old`
+//     );
+//   }
 
-interface Person { //Always result in an Object
-  firstName: string,
-  lastName: string,
-  age: number,
-  gender: boolean
-}
+//   addToPolicy(name: string) {
+//     this.peopleInPolicy.push(name)
+//   }
 
-const obj3: Person = {
-  firstName: "",
-  lastName: '',
-  age: 24,
-  gender: false
-}
+//   getPolicy() {
+//     console.log(this.peopleInPolicy);
+//     console.log(this.manufacturedDateTime);
+//   }
+// }
 
 
-const obj4: Person = {
-  firstName: "",
-  lastName: '',
-  age: 24,
-  gender: false
-}
+// const myBenz = new Car("Banz", "Black", 2);
+// myBenz.addToPolicy('Second');
+// myBenz.getPolicy();
 
 
-type PersonType = { // Don't specificly return an Object but any that we defined
-  firstName: "",
-  lastName: '',
-  age: 24,
-  gender: false
-}[]
+class Vehicule {
+  // Constructor
+  private peopleInPolicy: string[] = []
+  private readonly manufacturedDateTime: string = "2020-12-05"
 
-const obj5: PersonType = [
-  {
-    firstName: "",
-    lastName: '',
-    age: 24,
-    gender: false
+  constructor(public model: string, public color: string, public age: number) { }
+
+  //Methods
+  describe() {
+    console.log(
+      `This car is a ${this.color} ${this.model}, and this is ${this.age} year old`
+    );
   }
-]
+  addToPolicy(name: string) {
+    this.peopleInPolicy.push(name)
+  }
+  getPolicy() {
+    console.log(this.peopleInPolicy);
+    console.log(this.manufacturedDateTime);
+  }
+}
+
+
+const myBenz = new Vehicule("Banz", "Black", 2);
+myBenz.addToPolicy('Second');
+myBenz.getPolicy();
