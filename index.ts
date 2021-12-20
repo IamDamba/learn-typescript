@@ -1,43 +1,62 @@
-let numberOrString = "Aris Dev";
-
-numberOrString = "Lebron";
-numberOrString = 24;
-
-
-//UNION TYPE
-let numberOrStrin2: string | number | boolean | undefined | null = "Aris Dev";
-
-numberOrStrin2 = 4;
-numberOrStrin2 = true;
-
-let array: (string | number | boolean)[] = ["", 1, true, undefined];
-
-let obj: {
-  hello: string | number
+const obj: {
+  firstName: string,
+  lastName: string,
+  age: number,
+  gender: boolean
+} = {
+  firstName: "",
+  lastName: '',
+  age: 24,
+  gender: false
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-let rainbowColors: "red" | "orange" | "yellow" | "blue" | "indigo" | "violet" = 'red';
-
-rainbowColors = "orange";
-rainbowColors = "indigo";
-rainbowColors = "blue";
-rainbowColors = "yellow";
-
-enum RainbowTypes {
-  RED,
-  ORANGE,
-  YELLOW,
-  BLUE,
-  INDIGO,
-  VIOLET
+const obj2: {
+  firstName: string,
+  lastName: string,
+  age: number,
+  gender: boolean
+} = {
+  firstName: "",
+  lastName: '',
+  age: 24,
+  gender: false
 }
 
-let rainbowColors2: RainbowTypes = RainbowTypes.BLUE;
+interface Person { //Always result in an Object
+  firstName: string,
+  lastName: string,
+  age: number,
+  gender: boolean
+}
+
+const obj3: Person = {
+  firstName: "",
+  lastName: '',
+  age: 24,
+  gender: false
+}
 
 
-let obj2: {
-  property: string;
-  property2?: string;
-} = { property: "string" }
+const obj4: Person = {
+  firstName: "",
+  lastName: '',
+  age: 24,
+  gender: false
+}
+
+
+type PersonType = { // Don't specificly return an Object but any that we defined
+  firstName: "",
+  lastName: '',
+  age: 24,
+  gender: false
+}[]
+
+const obj5: PersonType = [
+  {
+    firstName: "",
+    lastName: '',
+    age: 24,
+    gender: false
+  }
+]
